@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 27
@@ -7,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 27
-        versionCode 63
-        versionName "0.0.63.8-quickfix"
+        versionCode 1
+        versionName "0.0.1.0-snapshot"
     }
 
     lintOptions {
@@ -28,9 +29,11 @@ android {
 }
 
 dependencies {
-    //这个依赖不是必须, 引入这个库是为了增强插件间通信能力
-    //https://github.com/limpoxe/Android-ServiceManager
-    implementation 'com.limpoxe.support:android-servicemanager:1.0.5@aar'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile 'tools.android:utils:1.1.2'
 }
 
 apply from: "./jcenter.gradle"
+repositories {
+    mavenCentral()
+}

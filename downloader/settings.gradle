@@ -1,3 +1,2 @@
-//include ':SimpleDownloader'
-//include ':VideoDownloader'
-include ':FileDownloader'
+include ':SimpleDownloader'
+include ':VideoDownloader'
